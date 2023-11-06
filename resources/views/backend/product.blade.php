@@ -21,7 +21,7 @@
                                     <div class="col-lg-6">
                                         <div class="float-right">
                                             <a href="{{ route('backend.products') }}" class="btn warning-btn"><i
-                                                        class="fa fa-reply"></i> {{ __('Back to List') }}</a>
+                                                    class="fa fa-reply"></i> {{ __('Back to List') }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -35,10 +35,11 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="lan">{{ __('Language') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="lan" id="lan" class="chosen-select form-control">
                                                         @foreach($languageslist as $row)
-                                                            <option {{ $row->language_code == $datalist['lan'] ? "selected=selected" : '' }} value="{{ $row->language_code }}">
+                                                            <option
+                                                                {{ $row->language_code == $datalist['lan'] ? "selected=selected" : '' }} value="{{ $row->language_code }}">
                                                                 {{ $row->language_name }}
                                                             </option>
                                                         @endforeach
@@ -89,12 +90,13 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="brand_id">{{ __('Brand') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="brand_id" id="brand_id"
                                                             class="chosen-select form-control">
                                                         <option value="0">No Brand</option>
                                                         @foreach($brandlist as $row)
-                                                            <option {{ $row->id == $datalist['brand_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
+                                                            <option
+                                                                {{ $row->id == $datalist['brand_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
                                                                 {{ $row->name }}
                                                             </option>
                                                         @endforeach
@@ -104,13 +106,14 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="cat_id">{{ __('Category') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="cat_id" id="cat_id"
                                                             class="chosen-select form-control">
                                                         <option value=""
                                                                 selected="selected">{{ __('Select Category') }}</option>
                                                         @foreach($categorylist as $row)
-                                                            <option {{ $row->id == $datalist['cat_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
+                                                            <option
+                                                                {{ $row->id == $datalist['cat_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
                                                                 {{ $row->name }}
                                                             </option>
                                                         @endforeach
@@ -123,11 +126,12 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="tax_id">{{ __('Tax') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="tax_id" id="tax_id"
                                                             class="chosen-select form-control">
                                                         @foreach($taxlist as $row)
-                                                            <option {{ $row->id == $datalist['tax_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
+                                                            <option
+                                                                {{ $row->id == $datalist['tax_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
                                                                 {{ $row->title }}
                                                             </option>
                                                         @endforeach
@@ -137,7 +141,7 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="sale_price">{{ __('Sale Price') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <input value="{{ $datalist['sale_price'] }}" name="sale_price"
                                                            id="sale_price" type="text"
                                                            class="form-control parsley-validated" data-required="true">
@@ -148,11 +152,12 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="storeid">{{ __('Store') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="storeid" id="storeid"
                                                             class="chosen-select form-control">
                                                         @foreach($storeList as $row)
-                                                            <option {{ $row->id == $datalist['user_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
+                                                            <option
+                                                                {{ $row->id == $datalist['user_id'] ? "selected=selected" : '' }} value="{{ $row->id }}">
                                                                 {{ $row->shop_name }}
                                                             </option>
                                                         @endforeach
@@ -162,11 +167,12 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="variation_size">{{ __('Unit') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <select name="variation_size" id="variation_size"
                                                             class="chosen-select form-control">
                                                         @foreach($unitlist as $row)
-                                                            <option {{ $row->name == $datalist['variation_size'] ? "selected=selected" : '' }} value="{{ $row->name }}">
+                                                            <option
+                                                                {{ $row->name == $datalist['variation_size'] ? "selected=selected" : '' }} value="{{ $row->name }}">
                                                                 {{ $row->name }}
                                                             </option>
                                                         @endforeach
@@ -181,8 +187,10 @@
                                                     <label for="is_featured">{{ __('Is Popular') }}</label>
                                                     <select name="is_featured" id="is_featured"
                                                             class="chosen-select form-control">
-                                                        <option {{ 1 == $datalist['is_featured'] ? "selected=selected" : '' }} value="1">{{ __('YES') }}</option>
-                                                        <option {{ 0 == $datalist['is_featured'] ? "selected=selected" : '' }} value="0">{{ __('NO') }}</option>
+                                                        <option
+                                                            {{ 1 == $datalist['is_featured'] ? "selected=selected" : '' }} value="1">{{ __('YES') }}</option>
+                                                        <option
+                                                            {{ 0 == $datalist['is_featured'] ? "selected=selected" : '' }} value="0">{{ __('NO') }}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -191,8 +199,10 @@
                                                     <label for="collection_id">{{ __('Is Trending') }}</label>
                                                     <select name="collection_id" id="collection_id"
                                                             class="chosen-select form-control">
-                                                        <option {{ 1 == $datalist['collection_id'] ? "selected=selected" : '' }} value="1">{{ __('YES') }}</option>
-                                                        <option {{ 0 == $datalist['collection_id'] ? "selected=selected" : '' }} value="0">{{ __('NO') }}</option>
+                                                        <option
+                                                            {{ 1 == $datalist['collection_id'] ? "selected=selected" : '' }} value="1">{{ __('YES') }}</option>
+                                                        <option
+                                                            {{ 0 == $datalist['collection_id'] ? "selected=selected" : '' }} value="0">{{ __('NO') }}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -202,14 +212,14 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="f_thumbnail_thumbnail">{{ __('Featured image') }}<span
-                                                                class="red">*</span></label>
+                                                            class="red">*</span></label>
                                                     <div class="tp-upload-field">
                                                         <input value="{{ $datalist['f_thumbnail'] }}" type="text"
                                                                name="f_thumbnail" id="f_thumbnail_thumbnail"
                                                                class="form-control" readonly>
                                                         <a onClick="onGlobalMediaModalView()" href="javascript:void(0);"
                                                            class="tp-upload-btn"><i
-                                                                    class="fa fa-window-restore"></i>{{ __('Browse') }}
+                                                                class="fa fa-window-restore"></i>{{ __('Browse') }}
                                                         </a>
                                                     </div>
                                                     <em>Recommended image size width: 400px and height: 400px.</em>
@@ -217,7 +227,7 @@
                                                         <div class="inner-image" id="view_thumbnail_image"></div>
                                                         <a onClick="onMediaImageRemove('f_thumbnail_thumbnail')"
                                                            class="media-image-remove" href="javascript:void(0);"><i
-                                                                    class="fa fa-remove"></i></a>
+                                                                class="fa fa-remove"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,7 +240,8 @@
                                                     <select name="is_publish" id="is_publish"
                                                             class="chosen-select form-control">
                                                         @foreach($statuslist as $row)
-                                                            <option {{ $row->id == $datalist['is_publish'] ? "selected=selected" : '' }} value="{{ $row->id }}">
+                                                            <option
+                                                                {{ $row->id == $datalist['is_publish'] ? "selected=selected" : '' }} value="{{ $row->id }}">
                                                                 {{ __($row->status) }}
                                                             </option>
                                                         @endforeach

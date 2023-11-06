@@ -1,0 +1,5 @@
+﻿"","","","","","","","","","","",""
+"","","","","","","Đơn hàng","","","","",""
+"","","","","","","","","","","",""
+"#","Mã đơn hàng","Ngày đặt hàng","Khách hàng","Cửa hàng","Tổng tiền ban đầu(vnđ)","Thuế(vnđ)","Phí vận chuyển(vnđ)","Tổng số tiền(vnđ)","Phương thức thanh toán","Trạng thái thanh toán","Trạng thái đơn hàng"
+"1","ORD-1062011","21-10-2023","gshock","G-shock việt nam","900,000.00","45,000.00","15,000.00","960,000.00","Stripe","Completed","Processing"
