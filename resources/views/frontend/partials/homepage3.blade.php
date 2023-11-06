@@ -159,7 +159,7 @@
                                                 <span class="item-label">{{ $discount }}% {{ __('Off') }}</span>
                                             @endif
                                             <a href="{{ route('frontend.product', [$row->id, $row->slug]) }}">
-                                                <img src="{{ asset('public/media/'.$row->f_thumbnail) }}"
+                                                <img style="object-fit: cover" src="{{ asset('public/media/'.$row->f_thumbnail) }}"
                                                      alt="{{ $row->title }}"/>
                                             </a>
                                             @if(($row->is_discount == 1) && ($row->end_date !=''))
@@ -253,7 +253,7 @@
                                         <span class="item-label">{{ $discount }}% {{ __('Off') }}</span>
                                     @endif
                                     <a href="{{ route('frontend.product', [$row->id, $row->slug]) }}">
-                                        <img src="{{ asset('public/media/'.$row->f_thumbnail) }}"
+                                        <img style="object-fit: cover" src="{{ asset('public/media/'.$row->f_thumbnail) }}"
                                              alt="{{ $row->title }}"/>
                                     </a>
                                 </div>
