@@ -76,7 +76,7 @@
                                                class="btn theme-btn" {{ $aRow->target =='' ? '' : "target=".$aRow->target }}>{{ $aRow->button_text }}</a>
                                         @endif
                                         <div class="offer-image">
-                                            <img src="{{ asset('public/media/'.$row->image) }}"
+                                            <img style="object-fit: cover" src="{{ asset('public/media/'.$row->image) }}"
                                                  alt="{{ $aRow->text_1 }}"/>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                             <div class="featured-card">
                                 <div class="featured-image">
                                     <a href="{{ route('frontend.product-category', [$row->id, $row->slug]) }}">
-                                        <img src="{{ asset('public/media/'.$row->thumbnail) }}" alt="{{ $row->name }}"/>
+                                        <img style="object-fit: cover" src="{{ asset('public/media/'.$row->thumbnail) }}" alt="{{ $row->name }}"/>
                                     </a>
                                 </div>
                                 <div class="featured-title">
@@ -423,7 +423,7 @@
                                         <span class="item-label">{{ $discount }}% {{ __('Off') }}</span>
                                     @endif
                                     <a href="{{ route('frontend.product', [$row->id, $row->slug]) }}">
-                                        <img src="{{ asset('public/media/'.$row->f_thumbnail) }}"
+                                        <img style="object-fit: cover" src="{{ asset('public/media/'.$row->f_thumbnail) }}"
                                              alt="{{ $row->title }}"/>
                                     </a>
                                 </div>
